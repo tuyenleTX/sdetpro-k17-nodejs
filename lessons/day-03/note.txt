@@ -1,0 +1,14 @@
+init simple nodejs project: npm init -y
+install a package: npm i readline-sync
+
+|, &: bitwise operator
+1. Resolve all values
+2. Combine: true | true: true
+
+||, &&: combine operator
+1. Resolve values from left to right, one by one
+2. if see the first true, will ignore the rest right ones
+
+
+
+
