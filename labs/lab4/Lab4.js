@@ -19,7 +19,7 @@ console.log(tiAccount);
 console.log(tunAccount);
 
 const bankAccounts = [teoAccount, tiAccount, tunAccount];
-console.log(bankAccounts);
+//console.log(bankAccounts);
 
 let isStillUsing = true;
 while (isStillUsing) {
