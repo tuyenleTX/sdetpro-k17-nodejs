@@ -60,23 +60,18 @@ function printMenu() {
 }
 
 function findAnAccount(bankAccounts, accountNumber) {
-        let flag = false;
-        let foundAccount = null;
         for (const account of bankAccounts) {
                 if (account.accountNumber === accountNumber) {
-                        foundAccount = account;
+                        return account;   
                 }
         }
-        return foundAccount;
-
+        return null;
 }
 
 function updateBalance(account, amount) {
         if (account.balance < amount) {
                 console.log(`Not enough money`);
-                flag = false;
         } else {
-                flag = true;
                 account.balance = account.balance - amount;
         }
 } 
