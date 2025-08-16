@@ -4,7 +4,7 @@
  */
 
 const givenArray = [3, 7, 22, 1];
-const targetNumber = 8;
+const targetNumber = 4;
 
 let indexesWithBruteForce = findIndexesBruteForce(givenArray, targetNumber);
 let indexesWithMap = findIndexesMap(givenArray, targetNumber);
@@ -15,7 +15,7 @@ console.log(indexesWithMap);
 function findIndexesBruteForce(givenArray, targetNumber) {
     for (let firstIndex = 0; firstIndex < givenArray.length - 1; firstIndex++) {
         let lookingNumber = targetNumber - givenArray[firstIndex];
-        for (let secondIndex = 0; secondIndex < givenArray.length; secondIndex++) {
+        for (let secondIndex = firstIndex + 1; secondIndex < givenArray.length; secondIndex++) {
             if (givenArray[secondIndex] === lookingNumber) {
                 return [firstIndex, secondIndex];
             }
