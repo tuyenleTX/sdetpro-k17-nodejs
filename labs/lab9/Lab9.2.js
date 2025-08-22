@@ -8,40 +8,20 @@ console.log(USER_ENDPOINT);
 console.log(POST_ENDPOINT);
 app();
 async function app() {
-    // let isPlaying = true;
-    // while (isPlaying) {
-    //     printMenu();
-    //     const userOption = getUserOption();
-    //     console.log(`user option selected is: ${userOption}`);
-    //     switch (userOption) {
-    //         case 1:
-    //             handleGetPostContent();
-    //             break;
-    //         case 2:
-    //             handleGetAllPosts();
-    //             break;
-    //         case 0:
-    //             isPlaying = false;
-    //             console.log(`See you again!`);
-    //             break;
-    //         default:
-    //             console.log("Invalid user option");
-    //     }
-    // }
-    // let isPlaying = true;
-    // while (isPlaying) {
+     let isPlaying = true;
+     while (isPlaying) {
         printMenu();
         const userOption = getUserOption();
         console.log(`user option selected is: ${userOption}`);
         if (userOption === 1) {
-            handleGetPostContent();
+            await handleGetPostContent();
         } else if (userOption === 2) {
-            handleGetAllPosts();
+            await handleGetAllPosts();
         } else if (userOption === 0) {
             isPlaying = false;
             console.log(`See you again!`);
         }
-    // }
+     }
 }
 
 function printMenu() {
