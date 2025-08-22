@@ -56,10 +56,10 @@ function getUserOption() {
 }
 
 function handleGetPostContent() {
-    const userId = _getUserInput("User Id: ");
+    const userId = getUserInput("User Id: ");
     return _getAllPostForUser(userId).then(function (returnedData) {
         if(returnedData.hasUser) {
-            const postId = _getUserInput("Post Id: ");
+            const postId = getUserInput("Post Id: ");
             const targetPost = returnedData.userRelatedPosts.filter(function (post) {
                 return post.id === postId;
             });
@@ -70,7 +70,7 @@ function handleGetPostContent() {
 }
 
 function handleGetAllPosts() {
-    const userId = _getUserInput("User Id: ");
+    const userId = getUserInput("User Id: ");
     return _getAllPostForUser(userId).then(function (returnedData) {
         if(returnedData.hasUser) {
             console.log(returnedData.userRelatedPosts);
@@ -103,14 +103,7 @@ function _getAllPostForUser(userId) {
 
 }
 
-function printAllPostsByUserId() {
-    console.log("printAllPostsByUserId");
-}
 
 function getUserInput(question) {
-    return Number(readline.question(question));
-}
-
-function _getUserInput(question) {
     return Number(readline.question(question));
 }
