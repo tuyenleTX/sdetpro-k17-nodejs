@@ -6,7 +6,8 @@ test(todoEndpoint);
 
 //logic
 async function test(url) {
-    const response = await fetch(url);
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    console.log(response);
     const jsonObject = response.json();
     if(jsonObject.completed) 
         console.log("Completed");
