@@ -1,5 +1,22 @@
+const readline = require("readline-sync");
 const Post = require("./Post");
 class RequestHandler {
+    printMenu() {
+        console.log(`Menu: 
+        1. Print all posts relates to user
+        2. Print a post content
+        0. Exit program
+        `)
+    }
+
+    getUserOption() {
+        return Number(readline.question("Please select your option: "));
+    }
+
+    getUserInput(question) {
+        return Number(readline.question(question));
+    }
+    
     async  printTargetPost(userId, postId) {
         // Construct the returned data as a Post data model from class Post
         const returnedData = await this._getAllPosts(userId);
@@ -27,9 +44,10 @@ class RequestHandler {
 
     async _getAllPosts(userId) {
         const BASE_URL = "https://jsonplaceholder.typicode.com/";
-        const usersResponse = await fetch(`${BASE_URL}/users`);
+        const USER_ENDPOINT = `${BASE_URL}/users`;
+        const usersResponse = await fetch(`${USER_ENDPOINT}/${userId}`);
         
-        const hasUser = usersResponse.ok;
+        const hasUser = usersResponse.ok;1
         if (hasUser) {
             const postsResponse = await fetch(`${BASE_URL}/posts`);
             const jsonPostsResponse = await postsResponse.json();
@@ -41,8 +59,7 @@ class RequestHandler {
                 relatedPostsByUserId: relatedPostsByUserId
             }
         } else {
-
-            console.log(`User Id ${userId} is not existing`);
+            console.log(`User Id 0${userId} is not existing`);
             return { hasUser: false };
 
         }

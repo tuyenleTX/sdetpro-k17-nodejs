@@ -6,17 +6,27 @@ lab11();
 
 // Function Declaration
 async function lab11(){
-    // Given params
-    //const userId = 1;
-    //const postId = 5;
-    const userId = Number(readline.question("User id: "));
-    const postId = Number(readline.question("Post id: "));
-    // Create RequestHandler object
+   
 
     let requestHandler = new RequestHandler();
-    
-     const post = await requestHandler.printTargetPost(userId, postId);
-     const allPost = await requestHandler.printAllPosts(userId);
-     console.log(post);
-     console.log(allPost);
+    let isPlaying = true;
+     while(isPlaying) {
+         requestHandler.printMenu();
+         const option = requestHandler.getUserOption();
+         if(option === 1) {
+            const userId = requestHandler.getUserInput("User id: ");
+            const allPost = await requestHandler.printAllPosts(userId);
+            console.log(allPost);
+         } else if (option === 2) {
+            const userId = requestHandler.getUserInput("User id: ");
+            const postId = requestHandler.getUserInput("Post id: ");
+            const post = await requestHandler.printTargetPost(userId, postId);
+            console.log(post);
+         } else if (option === 0) {
+             isPlaying = false;
+             console.log("See you again!");
+         } else {
+             console.log("Nhap lui roi teo oi!");
+         }
+     }
 }
