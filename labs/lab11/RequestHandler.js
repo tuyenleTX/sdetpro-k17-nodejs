@@ -47,7 +47,7 @@ class RequestHandler {
         const USER_ENDPOINT = `${BASE_URL}/users`;
         const usersResponse = await fetch(`${USER_ENDPOINT}/${userId}`);
         
-        const hasUser = usersResponse.ok;1
+        const hasUser = usersResponse.ok;
         if (hasUser) {
             const postsResponse = await fetch(`${BASE_URL}/posts`);
             const jsonPostsResponse = await postsResponse.json();
