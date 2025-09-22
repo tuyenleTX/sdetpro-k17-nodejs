@@ -13,4 +13,6 @@ async function lab11() {
     const allpost = await reqHandler.getAllPosts(userId);
     
     console.log(post);
+
+    console.log(allpost);
 }

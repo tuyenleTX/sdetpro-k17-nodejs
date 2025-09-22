@@ -1,0 +1,25 @@
+//const teo = new Person ("teo", -18);
+//if age <= 0, control through constructor
+const teo = new Person();
+teo._age = -18;
+//but if assign value -18 like teo._age = -18, cannot control
+
+let a = 1;
+a = "hello";
+//javascript can assign any value types
+
+typescript adds additional syntax to JavaScript to support a tighter 
+intergration with your editor. Catch errors early in your editor.
+
+npm install typescript --save-dev
+npm install typescript -g
+
+tsc -v : check version
+
+tsc --init : generate tsconfig.json
+tcs + relative path to generate js file then copy relative path of js file, node + relative path of js file 
+
+
+npm install nodemon -g
+npm install -g ts-node
+
