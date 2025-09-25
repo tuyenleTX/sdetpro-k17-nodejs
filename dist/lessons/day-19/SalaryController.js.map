@@ -1,0 +1,1 @@
+{"version":3,"file":"SalaryController.js","sourceRoot":"","sources":["../../../lessons/day-19/SalaryController.ts"],"names":[],"mappings":";;AACA,MAAqB,gBAAgB;IAC1B,cAAc,CAAC,YAAwB;QAC1C,IAAI,WAAW,GAAG,CAAC,CAAC;QACpB,KAAK,MAAM,GAAG,IAAI,YAAY,EAAE,CAAC;YAC7B,WAAW,GAAG,WAAW,GAAG,GAAG,CAAC,SAAS,EAAE,CAAC;QAChD,CAAC;QACD,OAAO,WAAW,CAAC;IACvB,CAAC;CACJ;AARD,mCAQC"}

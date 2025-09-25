@@ -1,0 +1,1 @@
+{"version":3,"file":"Employee.js","sourceRoot":"","sources":["../../../lessons/day-19/Employee.ts"],"names":[],"mappings":";AAAA,mBAAmB;AACnB,+BAA+B;;AAE/B,MAAqB,QAAQ;IAGzB,YAAY,MAAc;QADhB,SAAI,GAAW,UAAU,CAAC;QAEhC,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;IAEM,SAAS;QACZ,OAAO,IAAI,CAAC,MAAM,CAAC;IACvB,CAAC;IAEM,OAAO;QACV,OAAO,IAAI,CAAC,IAAI,CAAC;IACrB,CAAC;CACJ;AAdD,2BAcC"}
