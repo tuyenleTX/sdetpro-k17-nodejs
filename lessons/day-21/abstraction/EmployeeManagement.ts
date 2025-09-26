@@ -4,7 +4,7 @@ import SalaryController from "./SalaryController";
 
 
 
-const MAX_BONUS = 1000;
+
 
 let teo = new FTE("Teo", 20000, 250);
 
