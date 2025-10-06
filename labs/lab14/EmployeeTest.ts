@@ -24,4 +24,4 @@ utils.sortBySalary(employeeList);
 console.log(employeeList);
 
 console.log(`Employee with highest salary: ${employeeList[0].getName()}`);
-console.log(`Employee with lowest salary: ${employeeList[employeeList.length-1].getName()}`);
+console.log(`Employee with lowest salary: ${employeeList[employeeList.length - 1].getName()}`);
