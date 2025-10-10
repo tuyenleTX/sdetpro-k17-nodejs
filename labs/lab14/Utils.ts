@@ -12,4 +12,38 @@ export default class Utils {
             }
         }
     }
+
+    public sortByName(employeeList: Employee[], rule: string) {
+        const copied = [...employeeList];
+        if (rule === "ASC") {
+            return copied.sort(function (a, b) {
+                return a.getName().localeCompare(b.getName());
+            })
+        } else if (rule == "DESC") {
+            return copied.sort(function (a, b) {
+                return b.getName().localeCompare(a.getName());
+            })
+        }
+        else {
+            console.log("Invalid rule");
+        }
+        return copied;
+    }
+
+    public sortBySalary2(employeeList: Employee[], rule: string) {
+        const copied = [...employeeList];
+        if (rule === "ASC") {
+            return copied.sort(function (a, b) {
+                return a.getSalary() - b.getSalary();
+            })
+        } else if (rule == "DESC") {
+            return copied.sort(function (a, b) {
+                return b.getSalary() - a.getSalary();
+            })
+        }
+        else {
+            console.log("Invalid rule");
+        }
+        return copied;
+    }
 }
