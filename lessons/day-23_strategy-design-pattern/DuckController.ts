@@ -5,4 +5,7 @@ export default class DuckController{
         console.log("Do other things ...");
         duck.performQuack();
     }
+    public performFly(duck: Duck) : void {
+        duck.performFly();
+    }
 }

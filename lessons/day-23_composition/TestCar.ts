@@ -7,5 +7,5 @@ let gasEngine = new GasEngine();
 let car = new Car(gasEngine);
 car.startCar();
 
-car.changeEngine(new ElectricEngine) ;
+car.changeEngine(new ElectricEngine);
 car.startCar();
