@@ -1,11 +1,10 @@
 import Animal from "./Animal";
 
-export default class Horse extends Animal{
-   
-    constructor(name:string) {
-        super(name);
+import { MAX_SPEED } from "./SpeedConstants";
+export default class Horse extends Animal {
+
+    constructor() {
+        super("Horse", Math.floor(Math.random() * MAX_SPEED.tiger) + 1);
     }
-    public getSpeed():number {
-        return Math.floor(Math.random() * 75) + 1;
-    }
+
 }
